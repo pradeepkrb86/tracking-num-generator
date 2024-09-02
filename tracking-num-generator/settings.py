@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'generator.urls'
+ROOT_URLCONF = 'tracking-num-generator.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'generator.wsgi.application'
+WSGI_APPLICATION = 'tracking-num-generator.wsgi.application'
 
 
 # Database
@@ -109,7 +109,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/home/ubuntu/generator/debug.log',
+            'filename': '/home/ubuntu/tracking-num-generator/debug.log',
         },
     },
     'loggers': {
