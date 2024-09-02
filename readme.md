@@ -2,7 +2,8 @@
 # Tracking Number Generator
 
 It implements a RESTful API that generates unique tracking numbers for parcels.
-
+An instance of the project is deployed on AWS accessible at the below URL.
+https://scalpro.online/next-tracking-number/
 
 
 ## Prerequisites
@@ -175,4 +176,14 @@ To run tests, run the following command
 ```
 
 > **Note:** Please update the url for production as per your domain in the tests.py file and test environment(to localhost).
+
+## Additional Notes
+
+- **Concurrency Handling**: In production the application uses `gevent` workers in Gunicorn, allowing it to handle multiple requests concurrently within each worker.
+
+- **Error Handling**: The application includes basic error handling, but logging should be monitored to catch any unhandled exceptions during runtime.
+- 
+- **Scalability**: Different instances of the application have access to the tracking number data from shared database which allows for horizonal scalability.For increased load database can be changed to MySQL/PostgreSQL and create different server instances if required.
+
+- **Deployment**: The project is currently deployed using Gunicorn and Nginx on AWS.
 
